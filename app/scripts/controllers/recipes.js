@@ -8,11 +8,7 @@
  * Controller of the mealtimeApp
  */
 angular.module('mealtimeApp')
-  .controller('RecipesCtrl', function ($scope, $routeParams) {
-    
-    $scope.slug = $routeParams.slug;
-
-    $scope.step = $routeParams.step;
+  .controller('RecipesCtrl', function ($scope) {
 
     $scope.recipeList = [{
     	slug: "001",

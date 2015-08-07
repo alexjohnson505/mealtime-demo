@@ -32,7 +32,7 @@ angular
       controller: 'RecipesCtrl',
     })
     .state('recipe', {
-      url: "/recipe",
+      url: "/recipe/:slug",
       templateUrl: "views/recipe.html",
       controller: 'RecipeCtrl',
     });

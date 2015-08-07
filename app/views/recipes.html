@@ -2,8 +2,10 @@
 	<div class="back">
 		<a ng-href="#/">&#8592; Back to Home</a>
 	</div>
-	<div class="recipe" ng-repeat="recipe in recipeList" ui-sref="home">
-		<h4>{{recipe.name}}</h4>
-		<p>quick description here</p>
+	<div class="recipe-list">
+		<div class="recipe" ng-repeat="recipe in recipeList" ui-sref="recipe({slug:{{recipe.slug}}})">
+			<h4>{{recipe.name}}</h4>
+			<p>quick description here</p>
+		</div>
 	</div>
 </div>

@@ -97,17 +97,55 @@ div.back {
 
 }
 
-#recipes .recipe {
+#recipes .recipe-list .recipe {
   border-top: 1px solid #eee;
   padding: 10px;
 
 }
 
-#recipes .recipe:hover{
+#recipes .recipe-list .recipe:hover{
   background-color: #eee;
   cursor: pointer;
 }
 
+
+#recipe {
+  padding: 15px;
+  margin: 0;
+}
+
+#recipe .btn.btn-start {
+  padding: 20px 60px;
+  margin: 0 auto;
+  display: block;
+}
+
+#recipe .instruction-list .instruction {
+  border-top: 1px solid #eee;
+  padding: 15px;
+  margin: 0 -15px;
+
+}
+
+#recipe .instruction-list .instruction:hover{
+  background-color: #eee;
+  cursor: pointer;
+}
+
+#recipe .slide-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.btn.btn-previous,
+.btn.btn-next {
+    height: 58px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 40px;
+}
 /* Responsive: Portrait tablets, desktop and up */
 @media screen and (min-width: 768px) {
   body#app {

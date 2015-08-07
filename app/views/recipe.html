@@ -1,6 +1,30 @@
-<div id="recipe">
-	<p>This is the recipe view.</p>
+<div id="recipe" class="row">
 
-	<h1>{{slug}}</h1>
-	<h2>{{step}}</h2>
+    <div ng-show="currentStep < 0">
+        <div class="btn btn-primary btn-start" ng-click="currentStep = 0">START</div>
+        
+       
+        <div class="instruction-list">
+        	<h2>Instructions</h2>
+            <div class="instruction" ng-repeat="instruction in instructions" ng-click="setStep($index)">
+                <p>{{instruction.title}}</p>
+            </div>
+        </div>
+    </div>
+    <div ng-show="currentStep > -1">
+    	<div class="instruction">
+    	    	<h3>{{ instructions[currentStep].title }}</h3>
+		  		<p>{{ instructions[currentStep].desc }}</p>
+		  		<!-- {{ instructions[currentStep].img }} -->
+		  		<!-- {{ instructions[currentStep].time }} -->
+    	</div>
+        <div class="slide-controls">
+            <div class="col-xs-4">
+                <div class="btn btn-default btn-previous" ng-click="previous()">previous</div>
+            </div>
+            <div class="col-xs-4 col-xs-offset-4">
+                <div class="btn btn-success btn-next" ng-click="next()">next</div>
+            </div>
+        </div>
+    </div>
 </div>
