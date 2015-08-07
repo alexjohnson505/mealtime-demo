@@ -43,6 +43,9 @@ angular.module('mealtimeApp')
     $scope.next = function(){
       $scope.currentStep = $scope.currentStep + 1;
 
+      if ($scope.currentStep >= $scope.instructions.length){
+        $scope.currentStep = -1;
+      }
     }
 
     $scope.previous = function(){
