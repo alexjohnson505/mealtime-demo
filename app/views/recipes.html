@@ -1,0 +1,9 @@
+<div id="recipes">
+	<div class="back">
+		<a ng-href="#/">&#8592; Back to Home</a>
+	</div>
+	<div class="recipe" ng-repeat="recipe in recipeList" ui-sref="/">
+		<h4>{{recipe.name}}</h4>
+		<p>quick description here</p>
+	</div>
+</div>
