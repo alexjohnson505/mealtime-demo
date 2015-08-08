@@ -1,13 +1,23 @@
 <div id="recipe" class="row">
 
+    <timer countdown="10041" max-time-unit="'minute'" interval="1000">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+
     <div ng-show="currentStep < 0">
-        <div class="btn btn-primary btn-start" ng-click="currentStep = 0">START</div>
+        <div class="btn btn-primary btn-start" ng-click="currentStep = 0">START COOKING</div>
         
        
         <div class="instruction-list">
         	<h2>Instructions</h2>
-            <div class="instruction" ng-repeat="instruction in instructions" ng-click="setStep($index)">
-                <p>{{instruction.title}}</p>
+            <div class="instruction row" ng-repeat="instruction in instructions" ng-click="setStep($index)">
+                <div class="col-xs-2">
+                    <p>{{$index}}</p>
+                </div>
+                <div class="col-xs-8">
+                    <p>{{instruction.title}}</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>{{instruction.time}}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -19,11 +29,11 @@
 		  		<!-- {{ instructions[currentStep].time }} -->
     	</div>
         <div class="slide-controls">
-            <div class="col-xs-4">
-                <div class="btn btn-default btn-previous" ng-click="previous()">previous</div>
+            <div class="col-xs-6">
+                <div class="btn btn-default btn-previous" ng-click="previous()">Previous</div>
             </div>
-            <div class="col-xs-4 col-xs-offset-4">
-                <div class="btn btn-success btn-next" ng-click="next()">next</div>
+            <div class="col-xs-6">
+                <div class="btn btn-success btn-next" ng-click="next()">Next</div>
             </div>
         </div>
     </div>

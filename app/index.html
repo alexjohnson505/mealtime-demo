@@ -24,11 +24,13 @@
     <!-- Add your site or application content here -->
     <div class="header navbar navbar-default" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#/">mealtime</a>
+            <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-home"></span><span class="title">Mealtime</span></a>
         </div>
     </div>
     <div class="container">
-        <div ng-view=""></div>
+
+        <div class="debug-window" ng-hide="appActive">App Loading...... <br><br>If this message does not go away, Angular may be encountering an issue. Please check the browser's console for more information.</div>
+        
         <ui-view></ui-view>
     </div>
     <div class="footer">
@@ -60,6 +62,9 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
+    <script src="bower_components/humanize-duration/humanize-duration.js"></script>
+    <script src="bower_components/angular-timer/dist/angular-timer.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->

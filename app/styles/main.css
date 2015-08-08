@@ -54,11 +54,23 @@ body {
   padding-bottom: 19px;
 }
 
+.debug-window {
+  max-width: 280px;
+  margin: 120px auto 200px;
+  text-align: center;
+  font-style: italics;
+  word-wrap: break-word;
+}
+
 div.back {
   padding: 10px 15px;
 }
 .navbar {
   margin-bottom: 0;
+}
+
+.navbar .navbar-brand .title {
+  margin-left: 15px;
 }
 /* Custom page footer */
 .footer {
@@ -78,7 +90,7 @@ div.back {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #C7C7C7;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -100,7 +112,6 @@ div.back {
 #recipes .recipe-list .recipe {
   border-top: 1px solid #eee;
   padding: 10px;
-
 }
 
 #recipes .recipe-list .recipe:hover{
@@ -121,10 +132,11 @@ div.back {
 }
 
 #recipe .instruction-list .instruction {
-  border-top: 1px solid #eee;
-  padding: 15px;
-  margin: 0 -15px;
-
+    border-top: 1px solid #eee;
+    padding: 15px;
+    margin: 0 -15px;
+    line-height: 15px;
+    padding-top: 25px;
 }
 
 #recipe .instruction-list .instruction:hover{

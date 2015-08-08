@@ -36,12 +36,15 @@ angular
       templateUrl: "views/recipe.html",
       controller: 'RecipeCtrl',
     });
-    
+
+    // 404 Route
+    $urlRouterProvider.otherwise('/');
+  })
+
+  .run(function($rootScope){
+  
+    console.log("App Initialized & Running...");
+
+    $rootScope.appActive = true;
+
   });
-    
-    // .run(function($rootScope){
-
-    //   console.log("App Initialized & Running...");
-    //   $rootScope.user = null;
-
-    // })
