@@ -8,7 +8,7 @@
  * Controller of the mealtimeApp
  */
 angular.module('mealtimeApp')
-  .controller('RecipeCtrl', function ($scope, $state, $stateParams) {
+  .controller('RecipeCtrl', function ($scope, $state, $stateParams, $sanitize) {
     
     $scope.instructions = [{
     	title: "aaa",
@@ -17,9 +17,10 @@ angular.module('mealtimeApp')
 		  time: "aaa",
     }, {
     	title: "bbb",
-		  desc: "bbb",
+		  desc: 'bbb',
 		  img: "bbb",
 		  time: "bbb",
+      timer: 2,
     }, {
       title: "ccc",
       desc: "ccc",
@@ -31,6 +32,7 @@ angular.module('mealtimeApp')
       img: "ddd",
       time: "ddd",
     }];
+
 
     $scope.slug = $stateParams.slug;
 
@@ -51,6 +53,10 @@ angular.module('mealtimeApp')
     $scope.previous = function(){
       $scope.currentStep = $scope.currentStep - 1;
         
+    }
+
+    $scope.timerComplete = function(){
+      alert("Beeeep Beeeep Beeeeep!!!")
     }
   });
   

@@ -1,7 +1,5 @@
 <div id="recipe" class="row">
 
-    <timer countdown="10041" max-time-unit="'minute'" interval="1000">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
-
     <div ng-show="currentStep < 0">
         <div class="btn btn-primary btn-start" ng-click="currentStep = 0">START COOKING</div>
         
@@ -24,7 +22,11 @@
     <div ng-show="currentStep > -1">
     	<div class="instruction">
     	    	<h3>{{ instructions[currentStep].title }}</h3>
-		  		<p>{{ instructions[currentStep].desc }}</p>
+		  		<p>{{instructions[currentStep].desc}}</p>
+
+                <div ng-if="instructions[currentStep].timer > 0">
+                    <timer countdown="2" max-time-unit="'minute'" interval="1000" finish-callback="timerComplete()">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}} remaining</timer>
+                </div>
 		  		<!-- {{ instructions[currentStep].img }} -->
 		  		<!-- {{ instructions[currentStep].time }} -->
     	</div>

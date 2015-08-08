@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'timer',
     'ui.router',
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
