@@ -8,34 +8,42 @@
  * Controller of the mealtimeApp
  */
 angular.module('mealtimeApp')
-  .controller('RecipeCtrl', function ($scope, $state, $stateParams, $sanitize) {
+  .controller('RecipeCtrl', function ($scope, api, $state, $stateParams, $sanitize) {
     
-    $scope.instructions = [{
-    	title: "aaa",
-		  desc: "aaa",
-		  img: "aaa",
-		  time: "aaa",
-    }, {
-    	title: "bbb",
-		  desc: 'bbb',
-		  img: "bbb",
-		  time: "bbb",
-      timer: 2,
-    }, {
-      title: "ccc",
-      desc: "ccc",
-      img: "ccc",
-      time: "ccc",
-    },{
-      title: "ddd",
-      desc: "ddd",
-      img: "ddd",
-      time: "ddd",
-    }];
+    var id = $stateParams.id;
 
+    api.recipe(id, function(resp){
+      $scope.recipe = resp;
+    });
 
-    $scope.slug = $stateParams.slug;
+    // api.steps(id, function(resp){
+    //   $scope.steps = resp;
+    // });
 
+    // $scope.instructions = [{
+    // 	title: "aaa",
+		  // desc: "aaa",
+		  // img: "aaa",
+		  // time: "aaa",
+    // }, {
+    // 	title: "bbb",
+		  // desc: 'bbb',
+		  // img: "bbb",
+		  // time: "bbb",
+    //   timer: 2,
+    // }, {
+    //   title: "ccc",
+    //   desc: "ccc",
+    //   img: "ccc",
+    //   time: "ccc",
+    // },{
+    //   title: "ddd",
+    //   desc: "ddd",
+    //   img: "ddd",
+    //   time: "ddd",
+    // }];
+
+    
     $scope.currentStep = -1;
 
     $scope.setStep = function(step){

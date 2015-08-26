@@ -1,0 +1,10 @@
+"recipe_ingredient_id","quantity","is_optional","recipe_id","ingredient_id"
+3,"4 Sausages",FALSE,3,1
+4,"1 Can",FALSE,3,2
+9,"1 Pepper",FALSE,3,5
+10,"1 onion",FALSE,3,6
+11,"2 Cups",FALSE,3,7
+12,"1/2 teaspoon",TRUE,3,8
+13,"1/2 Jar",TRUE,3,9
+5,"2 teaspoons",FALSE,3,3
+7,"2 teaspoons",FALSE,3,4

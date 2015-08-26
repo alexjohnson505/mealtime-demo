@@ -1,0 +1,5 @@
+"global_timer_id","duration","recipe_id","notification_step_id","gating_step_id","description"
+1,"00:15:00",3,,13,"Preheat"
+2,"00:20:00",3,,18,"Sausage"
+3,"00:20:00",3,,27,"Sausage"
+4,"00:11:00",3,,28,"Pasta"

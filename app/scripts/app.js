@@ -22,6 +22,7 @@ angular
   .config(function ($stateProvider, $urlRouterProvider) {
     
     $stateProvider
+
     .state('home', {
       url: "/",
       templateUrl: 'views/main.html',
@@ -33,7 +34,7 @@ angular
       controller: 'RecipesCtrl',
     })
     .state('recipe', {
-      url: "/recipe/:slug",
+      url: "/recipe/:id",
       templateUrl: "views/recipe.html",
       controller: 'RecipeCtrl',
     });
@@ -42,10 +43,12 @@ angular
     $urlRouterProvider.otherwise('/');
   })
 
-  .run(function($rootScope){
-  
+  .run(function($rootScope, api){
+    
+    // Tell console Angular is working
     console.log("App Initialized & Running...");
 
+    // Disabe app loading message
     $rootScope.appActive = true;
 
   });

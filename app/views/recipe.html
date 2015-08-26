@@ -1,11 +1,8 @@
 <div id="recipe" class="row">
-
     <div ng-show="currentStep < 0">
         <div class="btn btn-primary btn-start" ng-click="currentStep = 0">START COOKING</div>
-        
-       
         <div class="instruction-list">
-        	<h2>Instructions</h2>
+            <h2>Instructions</h2>
             <div class="instruction row" ng-repeat="instruction in instructions" ng-click="setStep($index)">
                 <div class="col-xs-2">
                     <p>{{$index}}</p>
@@ -20,16 +17,13 @@
         </div>
     </div>
     <div ng-show="currentStep > -1">
-    	<div class="instruction">
-    	    	<h3>{{ instructions[currentStep].title }}</h3>
-		  		<p>{{instructions[currentStep].desc}}</p>
-
-                <div ng-if="instructions[currentStep].timer > 0">
-                    <timer countdown="2" max-time-unit="'minute'" interval="1000" finish-callback="timerComplete()">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}} remaining</timer>
-                </div>
-		  		<!-- {{ instructions[currentStep].img }} -->
-		  		<!-- {{ instructions[currentStep].time }} -->
-    	</div>
+        <div class="instruction">
+            <h3>{{ instructions[currentStep].title }}</h3>
+            <p>{{instructions[currentStep].desc}}</p>
+            <div ng-if="instructions[currentStep].timer > 0">
+                <timer countdown="2" max-time-unit="'minute'" interval="1000" finish-callback="timerComplete()">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}} remaining</timer>
+            </div>
+        </div>
         <div class="slide-controls">
             <div class="col-xs-6">
                 <div class="btn btn-default btn-previous" ng-click="previous()">Previous</div>

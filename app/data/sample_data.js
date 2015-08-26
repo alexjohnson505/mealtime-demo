@@ -1,0 +1,275 @@
+
+        // var recipes = [{
+        //     "recipe_id": "3",
+        //     "recipe_name": "Sausage, Peppers, and Onions",
+        //     "active_time": "00:05:00",
+        //     "total_time": "00:10:00",
+        //     "number_servings": "2",
+        //     "image_id": ""
+        // }];
+
+        // var steps = [{
+        //     "stepid": "1",
+        //     "recipe_id": "3",
+        //     "instruction": "Preheat oven to 415º.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "3",
+        //     "global_timer_to_start_id": "1",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "3",
+        //     "recipe_id": "3",
+        //     "instruction": "Poke the sausages with a fork. 1 serving is 2 sausages.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "4",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "5",
+        //     "recipe_id": "3",
+        //     "instruction": "Cut the onion into quarters.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "6",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "4",
+        //     "recipe_id": "3",
+        //     "instruction": "Cut the pepper into eighths.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "5",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "6",
+        //     "recipe_id": "3",
+        //     "instruction": "Line the baking tray with tin foil.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "7",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "9",
+        //     "recipe_id": "3",
+        //     "instruction": "Sprinkle 2 teaspoons of garlic powder.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "11",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "7",
+        //     "recipe_id": "3",
+        //     "instruction": "Add onion, pepper, and sausages evenly to the tray.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "8",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "8",
+        //     "recipe_id": "3",
+        //     "instruction": "Pour diced tomatoes over the tray.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "9",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "11",
+        //     "recipe_id": "3",
+        //     "instruction": "Sprinkle 2 teaspoons of Italian seasoning.",
+        //     "helper_text": "You can use 1 teaspoon basil and 1 teaspoon oregeno instead. ",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "12",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "12",
+        //     "recipe_id": "3",
+        //     "instruction": "Cover tray with another piece of tin foil.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "13",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "16",
+        //     "recipe_id": "3",
+        //     "instruction": "Preheat time is up!",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "notification_step"
+        // }, {
+        //     "stepid": "17",
+        //     "recipe_id": "3",
+        //     "instruction": "Take tray out, uncover, and put back in the oven for 20 minutes.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "3",
+        //     "step_type": "notification_step"
+        // }, {
+        //     "stepid": "23",
+        //     "recipe_id": "3",
+        //     "instruction": "Add 1 cup pasta to pot.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "4",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "24",
+        //     "recipe_id": "3",
+        //     "instruction": "Remove pot from heat.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "notification_step"
+        // }, {
+        //     "stepid": "25",
+        //     "recipe_id": "3",
+        //     "instruction": "Take tray out and uncover.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "notification_step"
+        // }, {
+        //     "stepid": "29",
+        //     "recipe_id": "3",
+        //     "instruction": "Turn stove off and drain water. Then put the pasta back into the pot.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "30",
+        //     "recipe_id": "3",
+        //     "instruction": "Turn off oven.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "31",
+        //     "recipe_id": "3",
+        //     "instruction": "Plate your meal and enjoy!",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "27",
+        //     "recipe_id": "3",
+        //     "instruction": "Cut a sausage in half to check if it's done. ",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "00:05:00",
+        //     "next_step_id": "30",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "timer_verification_step"
+        // }, {
+        //     "stepid": "21",
+        //     "recipe_id": "3",
+        //     "instruction": "Turn stove to high.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "22",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "normal_step"
+        // }, {
+        //     "stepid": "28",
+        //     "recipe_id": "3",
+        //     "instruction": "Taste pasta to make sure it's as soft as you'd like it.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "00:01:30",
+        //     "next_step_id": "29",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "timer_verification_step"
+        // }, {
+        //     "stepid": "18",
+        //     "recipe_id": "3",
+        //     "instruction": "Fill medium pot 3/4 full with water. Add 1/2 teaspoon (a pinch or two) salt.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "21",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "time_gated_step"
+        // }, {
+        //     "stepid": "13",
+        //     "recipe_id": "3",
+        //     "instruction": "Put tray in the oven.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "18",
+        //     "global_timer_to_start_id": "2",
+        //     "step_type": "time_gated_step"
+        // }, {
+        //     "stepid": "22",
+        //     "recipe_id": "3",
+        //     "instruction": "Wait for water to boil.",
+        //     "helper_text": "",
+        //     "media_id": "",
+        //     "local_timer_duration": "00:05:00",
+        //     "global_timer_reset_duration": "",
+        //     "next_step_id": "23",
+        //     "global_timer_to_start_id": "",
+        //     "step_type": "judgement_timed_step"
+        // }];
