@@ -8,7 +8,7 @@
  * Service in the mealtimeApp.
  */
 angular.module('mealtimeApp')
-    .service('api', function($http, $q) {
+    .service('api', function($rootScope, $http, $q) {
 
         var API_URL = "";
 
@@ -23,12 +23,12 @@ angular.module('mealtimeApp')
                 });
 
                 promise.error(function(resp){
-                	success(resp);
+                	error(resp);
                 });
             },
 
             // Get list of recipes
-            recipes: function(id, success, error) {
+            recipe: function(id, success, error) {
             	var promise = $http.get(API_URL + "/recipes/" + id);
                 
                 promise.success(function(resp){
@@ -36,7 +36,7 @@ angular.module('mealtimeApp')
                 });
 
                 promise.error(function(resp){
-                	success(resp);
+                	error(resp);
                 });
             },
         }

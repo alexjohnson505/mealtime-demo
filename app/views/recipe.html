@@ -1,4 +1,9 @@
 <div id="recipe" class="row">
+
+    <div class="debug-window" ng-hide="recipe">
+        Loading recipe....
+    </div>
+    
     <div ng-show="currentStep < 0">
         <div class="btn btn-primary btn-start" ng-click="currentStep = 0">START COOKING</div>
         <div class="instruction-list">

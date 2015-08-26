@@ -14,35 +14,9 @@ angular.module('mealtimeApp')
 
     api.recipe(id, function(resp){
       $scope.recipe = resp;
+    }, function(){
+      
     });
-
-    // api.steps(id, function(resp){
-    //   $scope.steps = resp;
-    // });
-
-    // $scope.instructions = [{
-    // 	title: "aaa",
-		  // desc: "aaa",
-		  // img: "aaa",
-		  // time: "aaa",
-    // }, {
-    // 	title: "bbb",
-		  // desc: 'bbb',
-		  // img: "bbb",
-		  // time: "bbb",
-    //   timer: 2,
-    // }, {
-    //   title: "ccc",
-    //   desc: "ccc",
-    //   img: "ccc",
-    //   time: "ccc",
-    // },{
-    //   title: "ddd",
-    //   desc: "ddd",
-    //   img: "ddd",
-    //   time: "ddd",
-    // }];
-
     
     $scope.currentStep = -1;
 
